@@ -1,97 +1,35 @@
-Introduction [![Build Status](https://secure.travis-ci.org/haiwen/seafile.svg?branch=master)](http://travis-ci.org/haiwen/seafile)
-============
+### Introduction
 
-Seafile is a next-generation open source cloud storage system with advanced support for file syncing, privacy protection and teamwork.
+disk42 is an online Cloud storage service that encrypts files for syncing and sharing. Our service is focused on user privacy and data security. All files uploaded to our servers are encrypted on users’ devices before being saved in the Cloud. To ensure maximum security, our users’ passwords are never sent to the server.
 
-Collections of files are called libraries, and each library can be synced separately. A library can be encrypted with a user chosen password. This password is not stored on the server, so even the server admin cannot view a file's contents.
-
-Seafile allows users to create groups with file syncing, wiki, and discussion to enable easy collaboration around documents within a team. 
-
-Feature Summary
-===============
-
-Seafile is a full-fledged cloud storage platform. It has the following features:
-
-### Complete and advanced file syncing
-
-1. Selective synchronization of file libraries. Each library can be synced separately.
-2. Correct handling of file conflicts based on history instead of timestamp.
-3. Efficient bandwidth usage by only transfering contents not in the server, and incomplete transfers can be resumed.
-4. Sync with two or more servers.
-5. Sync with existing folders.
-6. Sync a sub-folder.
-7. Full version control with configurable revision number.
+We use open source code to guarantee maximum security. disk42 is based on other open source projects such as nginx, MariaDB and (in particular) Seafile, the project of the great people of Haiwen.
 
 
-### Full team collaboration support
+### Our Aims
 
-1. Groups with file syncing, wiki, discussion.
-2. Online file editing and comments.
-3. Sharing sub-folders to users/groups.
-4. Sharing single files between users.
-5. Sharing links.
-6. Personal messages.
-
-### Advanced privacy protection
-
-1. Library encryption with a user chosen password.
-2. Client side encryption.
-3. Never sends the user's password to the server.
-
-Internal
-========
-
-Seafile's version control model is based on Git, but it is simplified for automatic synchronization does not need Git installed to run Seafile. 
-Each Seafile library behaves like a Git repository. It has its own unique history, which consists of a list of commits. 
-A commit points to the root of a file system snapshot. The snapshot consists of directories and files. 
-Files are further divided into blocks for more efficient network transfer and storage usage.
-
-Differences from Git:
-
-1. Automatic synchronization.
-2. Clients do not store file history, thus they avoid the overhead of storing data twice. Git is not efficient for larger files such as images.
-3. Files are further divided into blocks for more efficient network transfer and storage usage.
-4. File transfer can be paused and resumed.
-5. Support for different storage backends on the server side.
-6. Support for downloading from multiple block servers to accelerate file transfer.
-7. More user-friendly file conflict handling. (Seafile adds the user's name as a suffix to conflicting files.)
-8. Graceful handling of files the user modifies while auto-sync is running. Git is not designed to work in these cases.
-
-Build and Run
-=============
-
-See <https://github.com/haiwen/seafile/wiki>
-
-Internationalization (I18n)
-==========
-
-See [po/i18n.markdown](https://github.com/haiwen/seafile/blob/master/po/i18n.markdown)
-
-Change Logs
-===========
-
-See <https://seacloud.cc/group/3/wiki/home/>
+- We will focus on data security and privacy
+- We will encrypt all files prior to uploading
+- We will never send users’ passwords to our server
+- We will work hard to improve the user experience of secure file sharing
+- We will provide transparency by making our entire code open source
 
 
-Why Open Source
-===============
+### Our Motivation
 
-Our primary goal is to build a first-class product. Since we are only a small team, we think our goal can only be achieved by collaborating with the whole world.
+We are certainly not the first file synchronization service. There are many well-known  online file storage companies, such as Dropbox, Microsoft One Drive and Google Drive. 
 
-Seafile is an open and extensible system. A library is a collection of files that could be synced. It can be presented to users as a Wiki, a set of notes, a gallery and so on. We have already written the Wiki module as an example. We need your contributions to make Seafile more versatile. Let's build an awesome system together!
+However, the problem with these services is that they upload your files to their servers in an unencrypted form. This means that the service provider can access your files at any time. They can also give the NSA and other governmental agencies full access to your documents.
 
-Licence 
-=======
+We are offering a service where your private data stays private.
 
-Seafile and its desktop and mobile clients are published under the GPLv3.
+We started disk42 in late 2014 because there is a gap in the market. We want to provide a Cloud storage service with real data security. We will do this by ensuring that each file has strong end-to-end encryption. We offer complete transparency because we use 100% open source code.
 
-The Seafile server's web end, i.e. Seahub, is published under the Apache License.
+### Contact
 
-Contact
-=======
+Twitter: @disk42hq https://twitter.com/disk42hq
 
-Twitter: @seafile <https://twitter.com/seafile>
+Web: https://www.disk42.com
 
-Google Group: <https://groups.google.com/forum/?fromgroups#!forum/seafile>
+Mail: hello@disk42.com
 
-IRC: #seafile on freenode
+
