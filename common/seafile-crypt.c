@@ -19,7 +19,7 @@
 
 #define KEYGEN_ITERATION 1 << 19
 #define KEYGEN_ITERATION2 1000
-/* truly random sequece read from /dev/urandom. */
+/* ToDo: Generate random salt for each library */
 static unsigned char salt[8] = { 0xda, 0x90, 0x45, 0xc3, 0x06, 0xc7, 0xcc, 0x26 };
 
 SeafileCrypt *
